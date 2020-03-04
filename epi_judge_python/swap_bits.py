@@ -7,8 +7,7 @@ def swap_bits(x, i, j):
     bm2 = 1 << j
     if ( (not (x & bm1)) !=  (not (x & bm2))):
         x = x ^ bm1 ^ bm2
-    # return x
-    return 0
+    return x
 
 
 if __name__ == '__main__':
