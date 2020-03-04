@@ -1,5 +1,4 @@
 from test_framework import generic_test
-import sys
 
 def parity(x: int) -> int:
     p = 0
