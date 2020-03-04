@@ -13,11 +13,12 @@ from test_framework import generic_test
 
 def count_bits(x: int) -> int:
 
-    num_bits = 0
-    while x:
-        num_bits += x & 1
-        x >>= 1
-    return num_bits
+    # num_bits = 0
+    # while x:
+    #     num_bits += x & 1
+    #     x >>= 1
+    # return num_bits
+    return 0
 
 
 if __name__ == '__main__':
