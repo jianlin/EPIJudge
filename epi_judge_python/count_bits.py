@@ -7,7 +7,7 @@ def count_bits(x: int) -> int:
     while x:
         x = x & (x - 1)
         c += 1
-    return c
+    return c 
 
 
 if __name__ == '__main__':
