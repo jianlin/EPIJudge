@@ -6,7 +6,7 @@ def parity(x: int) -> int:
     while x:
         p = ~p
         x = x & (x-1)
-    return p & 1
+    return p & 1 
 
 
 if __name__ == '__main__':
