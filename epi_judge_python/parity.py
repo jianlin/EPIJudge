@@ -2,11 +2,10 @@ from test_framework import generic_test
 import sys
 
 def parity(x: int) -> int:
-    # TODO - you fill in here.
     p = 0
-    while x != 0:
+    while x:
         p = ~p
-        x = x & (x-1);
+        x = x & (x-1)
     return p & 1
 
 
