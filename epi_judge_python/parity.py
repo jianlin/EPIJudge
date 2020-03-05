@@ -8,7 +8,7 @@ def parity(x: int) -> int:
         p = ~p
         x = x & (x-1)
     return p & 1 
-    return 0
+
 
 
 if __name__ == '__main__':
