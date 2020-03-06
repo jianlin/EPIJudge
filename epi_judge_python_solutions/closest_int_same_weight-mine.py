@@ -2,20 +2,11 @@ from test_framework import generic_test
 
 
 def closest_int_same_bit_count(x: int) -> int:
-<<<<<<< HEAD
-    #return 0
-    
+
     if ( x & 1 == 1):  # has a 1 as rightmost bit   # ( (x + 1) & x == 0 ) can check for all 1's but not what we need here
         return (x + 1) + ((((x+1) & -(x+1)) - 1) >> 1)
     else:
         return x - 1 - (((x & -x) - 1) >> 1)
-=======
-    return 0
-    if ( x & 1 == 1):  # has a 1 as rightmost bit   # ( (x + 1) & x == 0 ) can check for all 1's but not what we need here
-        return (x + 1) + ((((x+1) & -(x+1)) - 1) >> 1)
-    else:
-        return x - 1 - (((x & (~x + 1)) - 1) >> 1)
->>>>>>> d1a03d19726d39edcf9b708ef0336114ed5322f1
 
 
 if __name__ == '__main__':
