@@ -14,7 +14,7 @@ def delete_duplicates(A: List[int]) -> int:
             p += 1
             A[p] = A[q]
         q += 1
-    return A
+    return p + 1
 
 
 
