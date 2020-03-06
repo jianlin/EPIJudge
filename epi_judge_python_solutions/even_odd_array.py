@@ -8,14 +8,26 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def even_odd(A: List[int]) -> None:
+    pOdd = 0
+    pEven = len(A) - 1
+    while pOdd < pEven:   # if equal, that's ok, the number can be even or odd and it is fine
+        if A[pOdd] % 2 == 0:
+            pOdd += 1
+        elif A[pEven] % 2 != 0:
+            pEven -= 1
+        else:    # now we are ready to do a swap
+            A[pOdd], A[pEven] = A[pEven], A[pOdd]
+            pOdd += 1
+            pEven -= 1
+    return A
 
-    next_even, next_odd = 0, len(A) - 1
-    while next_even < next_odd:
-        if A[next_even] % 2 == 0:
-            next_even += 1
-        else:
-            A[next_even], A[next_odd] = A[next_odd], A[next_even]
-            next_odd -= 1
+    # next_even, next_odd = 0, len(A) - 1
+    # while next_even < next_odd:
+    #     if A[next_even] % 2 == 0:
+    #         next_even += 1
+    #     else:
+    #         A[next_even], A[next_odd] = A[next_odd], A[next_even]
+    #         next_odd -= 1
 
 
 @enable_executor_hook
