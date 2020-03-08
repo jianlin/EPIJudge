@@ -7,6 +7,8 @@ from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
 
+# This is the Chapter 5 intro problem
+
 def even_odd(A: List[int]) -> None:
 
     next_even, next_odd = 0, len(A) - 1
