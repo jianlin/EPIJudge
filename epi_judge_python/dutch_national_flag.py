@@ -26,8 +26,8 @@ def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
     # TODO - you fill in here.
 
     the_pivot = A[pivot_index]
-    print("PIVOT", A[pivot_index])
-    print ("NOW0", A, the_pivot)
+    # print("PIVOT", A[pivot_index])
+    # print ("NOW0", A, the_pivot)
     pOdd = 0
     pEven = len(A) - 1
     while pOdd < pEven:   # if equal, that's ok, the number can be even or odd and it is fine
@@ -40,18 +40,18 @@ def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
             pOdd += 1
             pEven -= 1
 
-    print ("NOW First Pass", A)
+    # print ("NOW First Pass", A)
     pOdd = 0
     while pOdd < len(A) and A[pOdd] < the_pivot:
         pOdd += 1
 
-    print ("NOW2", pOdd, the_pivot, A[pOdd], A[pOdd -1])              
+    # print ("NOW2", pOdd, the_pivot, A[pOdd], A[pOdd -1])              
     # now pOdd is at the "greater than or eq region"        
 
     # TODO pass function in Python and make it just a helper function
     pEven = len(A) - 1
     while pOdd < pEven:   # if equal, that's ok, the number can be even or odd and it is fine
-        print ("INDEX", pOdd, pEven, A[pOdd], A[pEven])
+        # print ("INDEX", pOdd, pEven, A[pOdd], A[pEven])
         if A[pOdd] == the_pivot:
             pOdd += 1
         elif A[pEven] != the_pivot:
@@ -60,12 +60,6 @@ def dutch_flag_partition(pivot_index: int, A: List[int]) -> None:
             A[pOdd], A[pEven] = A[pEven], A[pOdd]
             pOdd += 1
             pEven -= 1
-    print ("NOW2", A)   
-    # print ("NOW3")       
-    # pOdd = 0
-    # while pOdd < len(A):
-    #     print (pOdd, A[pOdd])
-    #     pOdd += 1
     return
 
 
