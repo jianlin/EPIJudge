@@ -13,7 +13,10 @@ def plus_one(A: List[int]) -> List[int]:
         else:
             A[i] = 0
             i -= 1
-    A.insert(0, 1)
+    # can use A.insert(0, 1)
+    # but the trick can be to set leftmost as one and push 0 to array
+    A[0] = 1
+    A.append(0)
     return A
 
 
