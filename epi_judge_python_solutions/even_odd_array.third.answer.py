@@ -10,13 +10,21 @@ from test_framework.test_utils import enable_executor_hook
 # This is the Chapter 5 intro problem
 
 def even_odd(A: List[int]) -> None:
-    next_even, next_odd = 0, len(A) - 1
-    while next_even < next_odd:
-        if A[next_even] % 2 == 0:
-            next_even += 1
-        else:
-            A[next_even], A[next_odd] = A[next_odd], A[next_even]
-            next_odd -= 1
+    p, i = 0, 0
+    while i < len(A):
+        if A[i] % 2 == 0:  # even
+            A[i], A[p] = A[p], A[i]
+            p += 1
+        i += 1
+    return A
+
+    # next_even, next_odd = 0, len(A) - 1
+    # while next_even < next_odd:
+    #     if A[next_even] % 2 == 0:
+    #         next_even += 1
+    #     else:
+    #         A[next_even], A[next_odd] = A[next_odd], A[next_even]
+    #         next_odd -= 1
 
 
 @enable_executor_hook
